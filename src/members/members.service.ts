@@ -9,7 +9,7 @@ export class MembersService {
     return await MemberModel.query().insert(createMemberDto);
   }
 
-  async findAll(tenantId): Promise<MemberModel[]> {
+  async findAll(tenantId: number): Promise<MemberModel[]> {
     return await MemberModel.query().where('member.tenant_id', tenantId);
   }
 
